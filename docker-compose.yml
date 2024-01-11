@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  tatas-app:
+    image: app-node-mongo:1.0.0
+    ports:
+      - "3000:3000"
+  tatas-mongodb:
+    image: mongo:6.0.13-rc0-jammy
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=tatas
+      - MONGO_INITDB_ROOT_PASSWORD=password
